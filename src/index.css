@@ -1,13 +1,128 @@
-body {
+
+body{
+  overflow: hidden;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: lightgray;
+  height: 100vh;
+  color: white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.header{
+  display: flex;
+  height: 80px;
+  background-color: navy;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.header h3{
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.header img{
+  height: 100px;
+  width: 100px;
+}
+
+.prof-menu{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.prof-bar{
+  position: absolute;
+  display: flex;
+  right: 0;
+  width: 150px;
+  height: 200px;
+  top: 80px;
+  background-color: rgb(73, 119, 189);
+}
+
+.prof-bar ul li{
+  scale: 1.4;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.prof-bar ul li.active{
+  opacity: 0.2;
+  background-color: white;
+}
+
+.prof-bar ul{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+.menu-bar{
+  position: fixed;
+  display: flex;
+  width: 10%;
+  height: fit-content;
+  left: 0;
+  top: 80px;
+  background-color: rgb(73, 119, 189);
+  transition: all 0.6s ease;
+  color: rgb(248, 234, 208);
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.menu-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin-top: 200px;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  overflow: hidden;
+}
+
+.menu-list li:hover{
+  border-color: white;
+}
+.menu-list hr{
+  width: 100%;
+}
+.menu-list li{
+  scale: 1.4;
+  cursor: pointer;
+  border-bottom: 0.5px solid transparent;
+  padding: 5px;
+  width: 50%;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.menu-list li.active{
+  opacity: 0.2;
+  background-color: white;
+}
+
+
